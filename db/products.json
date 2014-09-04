@@ -1,0 +1,30 @@
+{
+  "_id": {"$oid": "000000000000000000000001"},
+  "name": "iPad",
+  "photo": "http://upload.wikimedia.org/wikipedia/commons/a/a4/IPad_3.png",
+  "price": 799.99
+}
+{
+  "_id": {"$oid": "000000000000000000000002"},
+  "name": "CLIQ By T-Mobile",
+  "photo": "http://www.wired.com/images_blogs/gadgetlab/2009/09/cliq-front-open-tmo.jpg",
+  "price": 299.99
+}
+{
+  "_id": {"$oid": "000000000000000000000003"},
+  "name": "PlayStation 4",
+  "photo": "http://cdn4.mos.techradar.futurecdn.net//art/games_consoles/PlayStation%204-623-80.jpg",
+  "price": 399.99
+}
+{
+  "_id": {"$oid": "000000000000000000000004"},
+  "name": "Xbox One",
+  "photo": "http://86bb71d19d3bcb79effc-d9e6924a0395cb1b5b9f03b7640d26eb.r91.cf1.rackcdn.com/wp-content/uploads/2013/05/xbox-one-console-image.jpg",
+  "price": 499.99
+}
+{
+  "_id": {"$oid": "000000000000000000000005"},
+  "name": "Nintendo 64",
+  "photo": "http://upload.wikimedia.org/wikipedia/commons/1/11/N64-Console-Set.jpg",
+  "price": 79.99
+}

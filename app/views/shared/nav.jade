@@ -6,17 +6,30 @@
         span.icon-bar
         span.icon-bar
         span.icon-bar
-      a.navbar-brand(href='/') Template
+      a.navbar-brand(href='/') Amazon Clone 
 
     .collapse.navbar-collapse#bs-navbar-collapse
       ul.nav.navbar-nav.navbar-right
         if user
+          li: a.fa.fa-ils.fa-2x(href='/profile') Profile
+          li: a.fa.fa-credit-card.fa-2x(href='/products') Product Search
           li
             form.navbar-form(method='post', action='/logout')
               .form-group
                 input(type='hidden', name='_method', value='delete')
-                button.btn.btn-danger= user.email
+                button.btn.btn-danger= user.email || user.username
         else
-          li: a(href='/register') Register
-          li: a(href='/login') Login
+          li
+            a.fa.fa-cog.fa-2x(href='/register') Register
+          li
+            a.fa.fa-yelp.fa-2x(href='/login') Login
+          li
+            a.fa.fa-twitter.fa-2x(href='/auth/twitter') 
+          li
+            a.fa.fa-github.fa-2x(href='/auth/github') 
+          li
+            a.fa.fa-google.fa-2x(href='/auth/google') 
+          li
+            a.fa.fa-facebook.fa-2x(href='/auth/facebook') 
+
 

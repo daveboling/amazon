@@ -1,6 +1,7 @@
 extends ../shared/template
 block content
   h2 Login
+  include ../shared/flash
   .row
     .col-xs-6
       form(role='form', method='post', action='/login')

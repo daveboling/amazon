@@ -10,7 +10,7 @@ var expect  = require('chai').expect,
     cookie  = null,
     request = require('supertest');
 
-describe('users', function(){
+describe('products', function(){
   before(function(done){
     request(app).get('/').end(done);
   });
@@ -28,13 +28,13 @@ describe('users', function(){
     });
   });
 
-  describe('get /register', function(){
-    it('should show the register page', function(done){
+  describe('get /products', function(){
+    it('should show the products page only if logged in', function(done){
       request(app)
       .get('/register')
+      .set('cookie', cookie)
       .end(function(err, res){
         expect(res.status).to.equal(200);
-        expect(res.text).to.include('Register');
         done();
       });
     });

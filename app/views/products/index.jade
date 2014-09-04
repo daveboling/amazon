@@ -1,0 +1,14 @@
+extends ../shared/template
+block content
+  h2 Product Page
+  h3
+    table.table
+      tr
+        th Product Name
+        th Photo
+        th Price
+          each product in products
+            tr
+              td= product.name
+              td: .photo(style='background-image: url(#{product.photo})')
+              td= product.price

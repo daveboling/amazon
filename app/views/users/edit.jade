@@ -1,0 +1,19 @@
+extends ../shared/template
+block content
+  h2 Profile Page
+  .row
+  .row
+    .col-xs-5
+      img.img-circle(src=user.photo || 'http://upload.wikimedia.org/wikipedia/commons/e/e0/Anonymous.svg')
+    .col-xs-1  
+    .col-xs-5
+      form(method='post' action='/profile/edit')
+        button.btn.btn-primary(type='submit')= user.email || user.username
+        .form-group
+          label E-mail
+          input.form-control(type='email' name='email' value=user.email || user.username + '@boling.com')
+          label Photo
+          input.form-control(type='text' name='photo' value=user.photo)
+          label Age
+          input.form-control(type='number' name='age' value=user.age)
+    .col-xs-1

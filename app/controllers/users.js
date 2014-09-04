@@ -11,9 +11,9 @@ exports.login = function(req, res){
 };
 
 exports.logout = function(req, res){
-  req.session.destroy(function(){
-    res.redirect('/');
-  });
+  req.logout(); //Passport adds this onto NodeJS request for you. This removes info from req.user
+  req.flash('notice', 'You have successfuly logged out');
+  res.redirect('/');
 };
 
 exports.create = function(req, res){
@@ -26,18 +26,19 @@ exports.create = function(req, res){
   });
 };
 
-exports.authenticate = function(req, res){
-  User.authenticate(req.body, function(user){
-    if(user){
-      req.session.regenerate(function(){
-        req.session.userId = user._id;
-        req.session.save(function(){
-          res.redirect('/');
-        });
-      });
-    }else{
-      res.redirect('/login');
-    }
+exports.profile = function(req, res){
+  res.render('users/profile');
+};
+
+exports.editProfile = function(req, res){
+  res.locals.user.save(req.body, function(){
+      res.render('users/edit');
+  });
+};
+
+exports.edit = function(req, res){
+  req.user.save(req.body, function(){
+    res.redirect('/profile');
   });
 };
 

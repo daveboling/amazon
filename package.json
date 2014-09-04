@@ -46,7 +46,13 @@
     "connect-redis": "~2.1.0",
     "bcrypt": "~0.8.0",
     "chalk": "~0.5.1",
-    "request": "~2.40.0"
+    "request": "~2.40.0",
+    "passport-local": "~1.0.0",
+    "passport": "~0.2.1",
+    "connect-flash": "~0.1.1",
+    "passport-twitter": "~1.0.2",
+    "passport-github": "~0.1.5",
+    "passport-google-oauth": "~0.1.5"
   },
   "devDependencies": {
     "blanket": "~1.1.6",

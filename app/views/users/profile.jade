@@ -1,0 +1,10 @@
+extends ../shared/template
+block content
+  h2 Profile Page
+  .row
+    .col-xs-2
+    .col-xs-4
+      a(href='/profile/edit')= user.email || user.username
+    .col-xs-4
+      img.img-circle.img-thumbnail(src=user.photo || 'http://upload.wikimedia.org/wikipedia/commons/e/e0/Anonymous.svg')
+    .col-xs-2
