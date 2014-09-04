@@ -1,37 +1,26 @@
-## name of project
-### Code Badges
-build status icon
-coverage status icon
-
-### Screenshots
-![Image1](https://raw.githubusercontent.com/nss-cohort-2014-06-07/express-template/master/docs/screenshots/one.jpg)
-![Image2](https://raw.githubusercontent.com/nss-cohort-2014-06-07/express-template/master/docs/screenshots/two.jpg)
+## NodeJS Amazon Clone
 
 ### Description
-write a description about your project
+An Amazon clone written in NodeJS using Stripe and Passport.
 
 ### Models
 ```
-Model 1
+Users
 ```
+.findById
+.register
+.localAuthenticate
+.twitterAuthenticate
+.googleAuthenticate
+.githubAuthenticate
+.facebookAuthenticate
+
 
 ```
-Model 2
+Products
 ```
+.all
 
-### Database
-```
-Collecion 1
-```
-
-```
-Collection 2
-```
-
-### Features
-- [x] Feature 1
-- [ ] Feature 2
-- [x] Feature 3
 
 ### Running Tests
 ```bash
@@ -40,7 +29,7 @@ $ npm test
 ```
 
 ### Contributors
-- [Chyld Medford](https://github.com/chyld)
+- [David Boling](https://github.com/kadowki)
 
 ### License
 [MIT](LICENSE)
